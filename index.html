@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Blog</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
 </head>
 <body>
 
-    <header><p>🌞</p></header>
+    <div id="first-page-theme"></div>
+    <header class="head">
+        <button id="next-page">View Blog</button>
+        <p>🌞</p></header>
     
     <main>
         <div class="main-body">
             <div class="left-side">
-                <div id="background-circle"><p>My First Blog</p></div>
+                <div id="background-circle">
+                    <p>My First Blog</p>
+                </div>
             </div>
             <div class="right-side">
                 <form id="form-content">
                     <p>What's on your mind?</p>
-                    <label for="username">User Name<br></label>
+                    <label for="username-input">User Name<br></label>
                     <input type="text" id="username-input" name="entry-area"><br>
-                    <label for="title">Title<br></label>
+                    <label for="title-input">Title<br></label>
                     <input type="text" id="title-input" name="entry-area"><br>
-                    <label for="content">Content<br></label>
+                    <label for="content-input">Content<br></label>
                     <textarea id="content-input" name="entry-area" rows="5"></textarea>
-                    <button>submit</button>
+                    <button id="button">Submit</button>
                 </form>
             </div>
         </div>
     </main>
 
+    <script src="./assets/js/form.js"></script>    
     <script src="./assets/js/logic.js"></script>    
+    
 </body>
 </html>

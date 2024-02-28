@@ -1,0 +1,130 @@
+/* This styles the index.html page for aligning items */
+
+.main-body {
+    display: flex;
+    flex-flow: row
+}
+
+
+.left-side {
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    border-right: 10px double black;
+    width: 50vw;
+    height: 90vh;
+    flex: 1 0 0;
+    /* position: relative; */
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    background-color: black;
+    color: white;
+    width: 100px;
+    padding: 2px;
+    font-size: 16px;
+    border: 2px solid gray;
+    margin-right: 1%
+}
+
+#background-circle {
+    background: linear-gradient(to bottom, #fed330, #fa8231);
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px 10px rgba(189, 223, 255, 0.795);
+    border: 2px solid rgb(247, 223, 192);
+    margin: auto;
+    position: relative;
+    /* bottom: 10vh; */
+}
+
+#background-circle p {
+    margin: 0;
+    width: 400px;
+    height: 400px;
+    padding-top: 43%;
+    color: white;
+    text-shadow: 3px 3px 5px rgb(58, 58, 58);
+}
+
+.right-side {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* bottom: 10vh; */
+}
+
+.right-side p {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.right-side input, .right-side button, .right-side textarea {
+    /* margin: 5px 3% 14px 3%;  */
+    width: 100%;
+}
+
+.right-side input {
+    margin-bottom: 1.5%;
+    margin-top: 0.5%;
+}
+
+.right-side textarea {
+    margin-top: 0.5%
+}
+
+.right-side button {
+    margin-top: 2%
+}
+
+.right-side button {
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-size: 18px;
+}
+
+#form-content {
+    width: 90%;
+}
+
+
+
+
+
+/* adjusting content to column format when the viewport is less than 900px in width */
+
+@media screen and (max-width: 900px) {
+    .main-body {
+        flex-direction: column;
+    }
+    
+    .left-side {
+        border-right: none;
+        border-bottom: 10px double black;
+        width: 100%;
+    }
+
+    #background-circle {
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .right-side p {
+        margin-top: 5%;
+    }
+
+    #form-content {
+        margin-top: 5%
+    }
+}
