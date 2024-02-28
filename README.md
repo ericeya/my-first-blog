@@ -10,7 +10,11 @@ The blog was created using HTML / CSS / Javascript files.
 
 ## Screenshots
 
-[!image of the working screen in deployed page](./assets/images/screenshot1.png)
+![image of the working screen in deployed page](./assets/images/screenshot1.png)
+![image of the working screen in deployed page](./assets/images/screenshot2.png)
+![image of the working screen in deployed page](./assets/images/screenshot3.png)
+![image of the working screen in deployed page](./assets/images/screenshot4.png)
+![image of the working screen in deployed page](./assets/images/screenshot5.png)
 
 ## Link to Deploy
 
