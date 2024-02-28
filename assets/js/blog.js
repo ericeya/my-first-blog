@@ -4,8 +4,9 @@ const blogPosts = document.querySelector('.blog-posts')
 
 // This function loads what is to be shown to the user. For loop was used to iterate and depict all previous blog posts as well as the one that user just input.
 function loadFromLocalStorage() {
-    const loadBlogData = JSON.parse(localStorage.getItem('blogData'))
-    if (loadBlogData!==null) {
+    const loadBlogDataEmpty = localStorage.getItem('blogData')
+    if (loadBlogDataEmpty !== '') {
+        const loadBlogData = JSON.parse(localStorage.getItem('blogData'))
         for (let i=0; i<loadBlogData.length; i++) {
             // Created variables for each of the object properties to be stored under a div element.
             const blogList = document.createElement("div");

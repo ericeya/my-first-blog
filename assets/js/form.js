@@ -10,7 +10,7 @@ const nextPage = document.querySelector('#next-page')
 
 
 // This function redirects the page to blog.html when the form is submitted
-function submitForm (event) {
+function submitForm () {
     window.location = "blog.html"
 }
 
@@ -43,14 +43,18 @@ function updateTempData (event) {
         }
 
         // This checks if there's already a data in the localstorage and updates accordingly.
-        const storedBlogData = JSON.parse(localStorage.getItem('blogData'))
-        if (storedBlogData) {
-            tempDataToAdd = storedBlogData
-            tempDataToAdd.push(blogData)
+        const storedBlogDataEmpty = localStorage.getItem('blogData');
+        if (storedBlogDataEmpty !== '') {
+            const storedBlogData = JSON.parse(localStorage.getItem('blogData'))
+            if (storedBlogData) {
+                tempDataToAdd = storedBlogData
+                tempDataToAdd.push(blogData)
+            } else {
+                tempDataToAdd.push(blogData)
+            }
         } else {
             tempDataToAdd.push(blogData)
         }
-
         // Once tempDataToAdd is updated with both localStorage and new user input, it runs the function to update localStorage.
         updateLocalStorage()
         submitForm()
