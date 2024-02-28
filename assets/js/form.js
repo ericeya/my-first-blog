@@ -61,6 +61,9 @@ form.addEventListener('submit', updateTempData)
 // button.addEventListener('click', submitForm)
 
 nextPage.addEventListener('click', function() {
+    if (localStorage.getItem('blogData')===null) {
+        localStorage.setItem('blogData', '')
+    }
     window.location = "blog.html"
 })
 
